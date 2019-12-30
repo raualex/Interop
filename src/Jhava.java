@@ -8,6 +8,12 @@ public class Jhava {
 
     public static void main(String[] args) {
         System.out.println(Hero.makeProclaimation());
+
+        System.out.println("Spells: ");
+        Spellbook spellbook = new Spellbook();
+        for (String spell : spellbook.spells) {
+            System.out.println(spell);
+        }
     }
 
     @NotNull
@@ -30,5 +36,9 @@ public class Jhava {
 
     public void setGreeting(String greeting) {
         this.greeting = greeting;
+    }
+
+    public void offerFood() {
+        Hero.handOverFood("pizza");
     }
 }
